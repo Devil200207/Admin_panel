@@ -1,5 +1,6 @@
 export {default as Navbar} from './navbar/Navbar';
 export {default as Sidebar} from './sidebar/Sidebar';
+export {default as Widget} from './widget/Widget';
 export {default as DashboardIcon} from '@mui/icons-material/Dashboard';
 export {default as Person2OutlinedIcon } from '@mui/icons-material/Person2Outlined';
 export {default as StoreMallDirectoryOutlinedIcon }from '@mui/icons-material/StoreMallDirectoryOutlined';
@@ -12,3 +13,8 @@ export {default as PsychologyIcon } from '@mui/icons-material/Psychology';
 export {default as SettingsIcon } from '@mui/icons-material/Settings';
 export {default as AccountCircleOutlinedIcon }from '@mui/icons-material/AccountCircleOutlined';
 export {default as LogoutIcon } from '@mui/icons-material/Logout';
+export {default as KeyboardArrowUpIcon } from '@mui/icons-material/KeyboardArrowUp';
+export {default as PersonOutlinedIcon } from '@mui/icons-material/PersonOutlined';
+export {default as AccountBalanceWalletOutlinedIcon } from '@mui/icons-material/AccountBalanceWalletOutlined';
+export {default as MonetizationOnOutlinedIcon } from '@mui/icons-material/MonetizationOnOutlined';
+export {default as ShoppingCartOutlinedIcon } from '@mui/icons-material/ShoppingCartOutlined';
