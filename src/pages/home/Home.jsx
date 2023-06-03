@@ -1,5 +1,5 @@
 import React from 'react';
-import {Sidebar,Navbar,Widget} from '../../components/index';
+import {Sidebar,Navbar,Widget,Featured,Chart,Tables} from '../../components/index';
 import './home.scss';
 
 
@@ -14,6 +14,14 @@ const Home = () => {
             <Widget type="order"/>
             <Widget type="earning"/>
             <Widget type="balance"/>
+          </div>
+          <div className="charts">
+            <Featured/>
+            <Chart/>
+          </div>
+          <div className="listContainer">
+            <div className="listTitle">Latest Transaction</div>
+            <Tables/>
           </div>
         </div>
     </div>
