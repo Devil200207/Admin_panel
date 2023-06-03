@@ -13,7 +13,7 @@ const Tables = () => {
       id: 1143155,
       product: "Acer Nitro 5",
       img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
+      customer: "John Wick",
       date: "1 March",
       amount: 785,
       method: "Cash on Delivery",
@@ -33,7 +33,7 @@ const Tables = () => {
       id: 2342353,
       product: "Redragon S101",
       img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
+      customer: "Winston",
       date: "1 March",
       amount: 35,
       method: "Cash on Delivery",
@@ -67,27 +67,32 @@ const Tables = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell className="tableCell">Tracking ID</TableCell>
+            <TableCell className="tableCell">Product</TableCell>
+            <TableCell className="tableCell">Customer</TableCell>
+            <TableCell className="tableCell">Date</TableCell>
+            <TableCell className="tableCell">Amount ($)</TableCell>
+            <TableCell className="tableCell">Payment Method</TableCell>
+            <TableCell className="tableCell">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
+          {
+            rows.map((row) => (
+              <TableRow key={row.id}>
+                <TableCell className="tableCell">{row.id}</TableCell>
+                <TableCell className="tableCell">
+                  <div className="cellWrapper">
+                    <img src={row.img} alt="img" className="image" />
+                    {row.product}
+                  </div>
+                </TableCell>
+                <TableCell className="tableCell">{row.customer}</TableCell>
+                <TableCell className="tableCell">{row.date}</TableCell>
+                <TableCell className="tableCell">{row.amount}</TableCell>
+                <TableCell className="tableCell">{row.method}</TableCell>
+                <TableCell className="tableCell"><span className={`status ${row.status}`}>{row.status}</span></TableCell>
+              </TableRow>
           ))}
         </TableBody>
       </Table>
